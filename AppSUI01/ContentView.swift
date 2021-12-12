@@ -9,30 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var selection: Int = 0
+    @State private var selection: Int = 1
     
     var body: some View {
         
+        ///здесь $selection позволит выбрать, с какого экрана начать
         TabView(selection: $selection) {
             DashboardScreen()
                 .tabItem {
-                    VStack {
-                        
-                        Label("Dashboard", systemImage: "paperplane")
-                    }
+                    Label("Dashboard", systemImage: "paperplane")
                 }
                 .tag(0)
             
             CatalogScreen()
                 .tabItem {
-                    Label("catalog", systemImage: "folder")
+                    Label("Catalog", systemImage: "folder")
                 }
                 .tag(1)
             
             ProfileScreen()
                 .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
+                    Label("Profile", systemImage: "person")
                 }
                 .tag(2)
         }
