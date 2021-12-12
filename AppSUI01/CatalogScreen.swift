@@ -27,29 +27,34 @@ struct Food: Identifiable {
 }
 
 struct CatalogScreen: View {
-    
     @ObservedObject var foodListViewModel: FoodListViewModel = .init()
+    var body: some View {
+        FoodList()
+            .environmentObject(foodListViewModel)
+    }
+}
+
+struct FoodList: View {
+    @EnvironmentObject var foodListViewModel: FoodListViewModel
     
     var body: some View {
-        
         List {
             CatalogFilterCell()
                 .environmentObject(foodListViewModel)
             
             ForEach(foodListViewModel.food) { food in
-                Label(food.name, systemImage: "leaf")
+                if !foodListViewModel.isFavEnabled || food.isFav {
+                    Label(food.name, systemImage: "leaf")
+                }
             }
         }
         .listStyle(.plain)
         .edgesIgnoringSafeArea(.all)
-        
     }
 }
 
 struct CatalogFilterCell: View {
-    
     @EnvironmentObject var foodListViewModel: FoodListViewModel
-    
     var body: some View {
         Toggle(isOn: $foodListViewModel.isFavEnabled) {
             Text("Show Favorites")
