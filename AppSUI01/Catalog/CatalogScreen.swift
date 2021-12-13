@@ -7,25 +7,6 @@
 
 import SwiftUI
 
-final class FoodListViewModel: ObservableObject {
-    
-    @Published var isFavEnabled: Bool = false
-    
-    @Published private(set) var food = [
-        Food(name: "Strawberry", isFav: false),
-        Food(name: "Cheese", isFav: true),
-        Food(name: "Apple", isFav: true),
-        Food(name: "Tomato", isFav: false)
-    ]
-    
-}
-
-struct Food: Identifiable {
-    var id: String { name }
-    let name: String
-    let isFav: Bool
-}
-
 struct CatalogScreen: View {
     @ObservedObject var foodListViewModel: FoodListViewModel = .init()
     var body: some View {

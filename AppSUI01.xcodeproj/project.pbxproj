@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A3CE43D2767ABE5005D7412 /* FoodListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3CE43C2767ABE5005D7412 /* FoodListViewModel.swift */; };
 		6AB3794727662D7C00AFD53C /* AppSUI01App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3794627662D7C00AFD53C /* AppSUI01App.swift */; };
 		6AB3794927662D7C00AFD53C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3794827662D7C00AFD53C /* ContentView.swift */; };
 		6AB3794B27662D8700AFD53C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB3794A27662D8700AFD53C /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A3CE43C2767ABE5005D7412 /* FoodListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModel.swift; sourceTree = "<group>"; };
 		6AB3794327662D7C00AFD53C /* AppSUI01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSUI01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB3794627662D7C00AFD53C /* AppSUI01App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSUI01App.swift; sourceTree = "<group>"; };
 		6AB3794827662D7C00AFD53C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A3CE43B2767ABCF005D7412 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				6AB379562766349600AFD53C /* CatalogScreen.swift */,
+				6A3CE43C2767ABE5005D7412 /* FoodListViewModel.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		6AB3793A27662D7C00AFD53C = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +85,7 @@
 				6AB3794627662D7C00AFD53C /* AppSUI01App.swift */,
 				6AB3794827662D7C00AFD53C /* ContentView.swift */,
 				6AB3795C27664ABD00AFD53C /* Dashboard */,
-				6AB379562766349600AFD53C /* CatalogScreen.swift */,
+				6A3CE43B2767ABCF005D7412 /* Catalog */,
 				6AB37958276634B000AFD53C /* ProfileScreen.swift */,
 				6AB3794A27662D8700AFD53C /* Assets.xcassets */,
 				6AB3794C27662D8700AFD53C /* Preview Content */,
@@ -191,6 +202,7 @@
 			files = (
 				6AB3794927662D7C00AFD53C /* ContentView.swift in Sources */,
 				6AB3795E27664AF400AFD53C /* AboutAppScreen.swift in Sources */,
+				6A3CE43D2767ABE5005D7412 /* FoodListViewModel.swift in Sources */,
 				6AC1703B2766517100BD3CC1 /* ContactScreen.swift in Sources */,
 				6AB379572766349600AFD53C /* CatalogScreen.swift in Sources */,
 				6AB3794727662D7C00AFD53C /* AppSUI01App.swift in Sources */,
