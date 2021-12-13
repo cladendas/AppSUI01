@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIComponents
 
 struct DashboardScreen: View {
     var body: some View {
@@ -22,6 +23,9 @@ struct DashboardListView: View {
     
     var body: some View {
         List {
+            
+            Section(content: {}, header: { ActivityView() } )
+            
             DashboardHeadCell(isAboutAvtive: $isAboutAvtive)
 
             NavigationLink(isActive: $isAboutAvtive) {
