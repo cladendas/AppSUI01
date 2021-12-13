@@ -18,6 +18,7 @@
 		6AB3795E27664AF400AFD53C /* AboutAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3795D27664AF400AFD53C /* AboutAppScreen.swift */; };
 		6AC1703B2766517100BD3CC1 /* ContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1703A2766517100BD3CC1 /* ContactScreen.swift */; };
 		6AC1703E27665A8E00BD3CC1 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1703D27665A8E00BD3CC1 /* LazyView.swift */; };
+		6AC1706427679F6E00BD3CC1 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC1706327679F6E00BD3CC1 /* UIComponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		6AB3795D27664AF400AFD53C /* AboutAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppScreen.swift; sourceTree = "<group>"; };
 		6AC1703A2766517100BD3CC1 /* ContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactScreen.swift; sourceTree = "<group>"; };
 		6AC1703D27665A8E00BD3CC1 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		6AC1706127679F4100BD3CC1 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = text; name = UIComponents; path = Modules/UIComponents; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC1706427679F6E00BD3CC1 /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 			children = (
 				6AB3794527662D7C00AFD53C /* AppSUI01 */,
 				6AB3794427662D7C00AFD53C /* Products */,
+				6AC1706227679F6E00BD3CC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,7 @@
 		6AB3794527662D7C00AFD53C /* AppSUI01 */ = {
 			isa = PBXGroup;
 			children = (
+				6AC1706127679F4100BD3CC1 /* UIComponents */,
 				6AC1703C27665A4A00BD3CC1 /* ViewModifiers */,
 				6AB3794627662D7C00AFD53C /* AppSUI01App.swift */,
 				6AB3794827662D7C00AFD53C /* ContentView.swift */,
@@ -104,6 +109,13 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
+		6AC1706227679F6E00BD3CC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +132,9 @@
 			dependencies = (
 			);
 			name = AppSUI01;
+			packageProductDependencies = (
+				6AC1706327679F6E00BD3CC1 /* UIComponents */,
+			);
 			productName = AppSUI01;
 			productReference = 6AB3794327662D7C00AFD53C /* AppSUI01.app */;
 			productType = "com.apple.product-type.application";
@@ -385,6 +400,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6AC1706327679F6E00BD3CC1 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6AB3793B27662D7C00AFD53C /* Project object */;
 }
