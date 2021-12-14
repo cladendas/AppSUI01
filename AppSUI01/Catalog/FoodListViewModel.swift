@@ -18,6 +18,20 @@ final class FoodListViewModel: ObservableObject {
         Food(name: "Tomato", isFav: false)
     ]
     
+    @Published private(set) var numbers: [Int] = Array(0..<100)
+    @Published private(set) var numbersFallback: [[Int]] = .init() // iOS 13
+    
+    init() {
+        collectArticleAsGrid()
+    }
+    
+    // iOS13 Fallback
+    func collectArticleAsGrid() {
+        let columned = numbers.publisher.collect(3) // [[0,1,2], [3,4,5], ...] of Publishers
+        _ = columned.collect().sink {
+            self.numbersFallback = $0
+        }
+    }
 }
 
 struct Food: Identifiable {
