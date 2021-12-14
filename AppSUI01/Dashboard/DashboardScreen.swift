@@ -48,27 +48,24 @@ struct DashboardHeadCell: View {
         HStack {
             Spacer()
             
-            //ПРОБЛЕМА!!!
-            //кнопки накладываются друг на друга
-//            Button {
-//                isAboutAvtive.toggle()
-//            } label: {
-//                VStack {
-//                    Image(systemName: "person.circle")
-//                    Text("About 1")
-//                }
-//            }
+            VStack {
+                Image(systemName: "person.circle")
+                Text("About 1")
+            }
+            .onTapGesture {
+                isAboutAvtive.toggle()
+            }
             
-//            Spacer()
+            Spacer()
             
-            Button {
+            VStack {
+                Image(systemName: "text.book.closed")
+                Text("Contact")
+            }
+            .onTapGesture {
                 dashboardViewModel.isContactShowed.toggle()
-            } label: {
-                VStack {
-                    Image(systemName: "text.book.closed")
-                    Text("Contact")
-                }
-            }.sheet(isPresented: $dashboardViewModel.isContactShowed) {
+            }
+            .sheet(isPresented: $dashboardViewModel.isContactShowed) {
                 ContactScreen()
             }
             
